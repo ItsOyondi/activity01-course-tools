@@ -20,6 +20,7 @@ This is a suggestion that I strongly recommend that you follow.
 We will see how naming code chunks makes our life easier later in this document so be sure to stick around.
 
 ```{r simple-calculations}
+2 + 5
 
 ```
 
@@ -27,9 +28,29 @@ In the code chunk named "simple-calculations", add the R code that does the foll
 
 1. Adds the values 2 and 5.
 2. Creates an R object called `int_vect` that contains the values 1 through 9 - can you do this without typing each number?.
+
+```{r int_vect}
+int_vect <- 1:9 #get numbers from 1 to 9
+int_vect
+```
+
 3. Creates an R objected called `char_vect` that contains the letters "A" (the first letter of the alphabet) through "Q" (the 17th letter of the alphabet) - can you do this without typing each letter?
+
+```{r}
+char_vect <- LETTERS[1:17]
+char_vect #return the all letters from A to Q(17)
+```
+
 4. Using code, determine how many of the items in `char_vect` occur after the letter "D"
+
+```{r}
+num_after_D <- length(which(char_vect > "D"))
+num_after_D #Get the number of letters after D
+```
+
 5. Provides a descriptive comment for each of the above tasks.
+
+
 6. Run each line to verify that you get the results you would expect, then click on the **knit** <img src="../README-img/knit-icon.png" alt="knit" width = "20"/> icon your Rmd document to verify that no errors occur.
   If you use [keyboard shortcuts](https://support.posit.co/hc/en-us/articles/200711853-Keyboard-Shortcuts-in-the-RStudio-IDE), like me, you can instead press Ctrl + Shift + K (for mac users: Cmd + Shift + K).
 7. Return to the **Day 3** `README` file to finish the process of committing and pushing to GitHub.
@@ -349,7 +370,7 @@ Answer the following question:
 
 - Create a new R code chunk and type the following code.
   
-```{verbatim fitted-residual}
+```{verbatim residual-new}
 ggplot(data = slr_aug, aes(x = .resid)) +
   geom_histogram(binwidth = 0.25) +
   xlab("Residuals")

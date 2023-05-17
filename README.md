@@ -1,6 +1,6 @@
 Activity 01 - Course Tools
 ================
-Edit by Jose
+
 
 
 This activity is intended to be completed in over three class sessions,
